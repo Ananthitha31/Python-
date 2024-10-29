@@ -1,0 +1,26 @@
+a = c = 12  
+b = 0
+
+
+while c > 0:
+    rem = c % 10
+    b = (b * 10) + rem
+    c //= 10  
+
+sq = a ** 2  
+sqb = b ** 2  
+d = 0
+
+
+while sq > 0:
+    rem = sq % 10
+    d = (d * 10) + rem
+    sq //= 10  
+
+if d == sqb:
+    print("The given number is an Adams number")
+else:
+    print("The given number is not an Adams number")
+
+    
+
