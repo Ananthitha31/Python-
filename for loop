@@ -1,0 +1,53 @@
+for a in range(30):
+    print(a)
+print("FOR AND BREAK")
+for x in range(30):
+    if x==4:
+        print("this is 4")
+        break
+    print(x)
+else:
+    print("loop ended")
+b = "Ananthitha"
+for x in b:
+    print(x)
+sent = "My name is Ananthitha"
+new = ''
+for i in sent:
+    if i not in 'aeiouAEIOU':
+        new+=i
+print(new) '''
+'''adj = ["red", "big", 'tasty']
+fruits = ['apple', 'banana', 'cherry']
+for i in adj:
+    for j in fruits:
+        print(i, j)
+
+lists = [[1,2,3], [4,5,6]]
+for i in lists:
+    for k in i:
+        print(k)
+fruits = ['app', 'bana', 'cherry']
+for p in fruits:
+    if p =='app':
+        continue
+    print(p)
+for y in range(2, 30, 2):
+    print(y)
+for j in range(4):
+    pass
+lis1 =[, 'anan', 'app', 'bana']
+lis2 = [3, 2, 'orange', 'app', 'bana']
+c=0
+for i in lis1:
+    if i in lis2:
+        print(i)
+        c+=1
+print('count is', c)
+b = ['anan', 'ragul', 'orange']
+new = ''
+for i in b:
+    for j in i:
+        if j not in 'aeiouAEIOU':
+            new+=j
+print(new)
