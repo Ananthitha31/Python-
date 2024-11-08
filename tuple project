@@ -1,0 +1,63 @@
+#Student mangagement program
+staff = ('Hariharan', 'Adams', 'Turner', 'Harris')
+sub = ['English', 'Soft skill', 'Programming', 'calculus']
+students=['Harry', 'Prem', 'Ananthitha', 'Karthic' ]
+sec = ['A', 'B', 'C', 'D'] 
+student_no = [777777, 888888]
+loop = 1
+while loop==1 :
+    print(""" Choose any option
+1) Staff details
+2) student login
+3) New student sign in
+4) staff login
+5) new staff sign up 
+5) exit""")
+    choice = int(input("Enter your choice "))
+    if choice == 1:
+        a = input("Enter the staff name (first letter capital) ")
+        d = a.capitalize()
+        if d in staff:
+                 i = staff.index(d)
+                 print("Subject handeled by this staff is", sub[i])
+                 
+        else:
+            print("The available teachers are: ")
+            for j in staff:
+                print(j, end=" " )
+
+    if choice == 2:
+        stu = int(input("Enter your password "))
+        
+        if stu in student_no :
+            i = student_no.index(stu)
+            name = "Student name is {}"
+            s = "Studying in {}"
+            t = "You have enrolled in {} course , {} will be handling this subject"
+            print(name.format(students[i]))
+            print(s.format(sec[i]))
+            print(t.format(sub[i], staff[i]))
+        else:
+            print("Your number is not registered . press 3 to login in ")
+    
+    if choice == 3:
+        name = input("Enter your name ")
+        name = name.capitalize()
+        se = input("Enter your section ")
+        se.upper()
+        if se in sec :
+            continue
+        else:
+            print(" sesion is not available ")
+        
+        sj = input("Enter the course to be registered ")
+        exit()
+        passw = int(input("Set up a password  "))
+        students.append(name)
+        student_no.append(passw)
+        f = sj.capitalize()
+        if f in sub :
+            continue
+        else:
+            subjects.append(f)
+    loop = int(input("Print 1 if u want to continue"))
