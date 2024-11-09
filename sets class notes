@@ -1,0 +1,78 @@
+#set operations
+a = {'apple', 'banana', 'kiwi'}
+b = {'apple', 'banana', 'orange'}
+print(a)
+print(b-a)
+print(a-b)
+print(a|b)
+print(a&b)
+print(a^b)
+# set methods
+a = {x for x in 'LIVEWIRE' if x in 'RE'}
+print(a)
+a.update([4, 5], {1, 2, 3})
+print(a)
+a.discard(5)
+print(a)
+a.remove(4)
+print(a)
+x =  {'a', 'b', 'c'}
+y = {'f', 'd', 'a', 'b', 'c' }
+z=x.issubset(y)
+print(z)
+z=y.issuperset(x)
+print(z)
+z=x.isdisjoint(y)
+print(z)
+
+a = {0,1 , 2, 3,4 }
+b = {2, 3}
+a.pop()
+print(a)
+a.add(5)
+print(a)
+print(max(a))
+print(min(a))
+print(a.difference(b))
+#1)
+a = {'T', 'True', 45, 23, 56, 'Joes', 45.6}
+print(a)
+print(type(a))
+
+#2)
+b = {10, 40, 60, 20, 80, 50}
+for i in b:
+      print(i, end=' ')
+
+#3)
+c = {'lion', 'cat'}
+c.add('Dog')
+print(c)
+c.update(['Ponda', 'Tiger'])
+print(c)
+
+#4)
+d = {50, 20, 70, 60, 30}
+d.remove(50)
+print(d)
+
+#5)
+if 50 in d:
+    d.remove(50)
+#6)
+w = {40, 20, 70, 30}
+y = {40, 50, 20, 60}
+print("Intersection of two sets ", w&y)
+#7)
+print("Union of two Sets ", w|y)
+#8)
+A={80, 50, 20, 70, 40, 30}
+B={50, 20, 90, 40, 10, 60}
+print("Difference of a-b", A-B)
+print("Difference of b-a", B-A)
+#9)
+print('uncommon', A^B)
+#10)
+a = {"Tutor", "Joes"}
+b=a.copy()
+print(b)
