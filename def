@@ -1,0 +1,79 @@
+def armstrong(n):
+    nu = n
+    su=0
+    while (n>0):
+        c = n%10
+        cube = c**3
+        su+=cube
+        n//=10
+    if su == nu:
+        print("Given number is a armstrong no")
+    else:
+        print("Given number is not an armtrong no")
+def fibonocci(n):
+    x = 1
+    y = 1
+    ans = 0
+    while(ans<n):
+        ans = x+y
+        x = y
+        y = ans
+        print(ans, end=' ')
+
+    
+    
+def fac(n):
+    ans = 1
+    while(n>0):
+        ans*=n
+        n-=1
+    print(ans)
+def reverse(num):
+    num = a
+    c=0
+    while num > 0:
+        rem = num % 10
+        c = (c * 10) + rem
+        num //= 10
+    return c
+def square(x):
+    return x**2
+def adam(y):
+    if reverse(square(y)) == square(reverse(y)):
+        print("The given number is an Adams number")
+    else:
+        print("The given number is not an Adams number")
+def palindrome(p):
+    if reverse(p) == p :
+        print("Give no is a palindrome")
+    else:
+        print("not a palindronme")
+a=1
+while a==1 :
+    choice = int(input("""Enter
+1 - armstrong number
+2 - fibonnacci series
+3 - factorial
+4 - Adams no
+5 - palindrome """))
+    if (choice == 1):
+        ar = int(input('Enter value '))
+        armstrong(ar)
+
+    elif choice == 2:
+        num = int(input("Enter the limit of fibonnaci "))
+        fibonocci(num)
+    
+    elif choice == 3:
+        f = int(input("Enter no fo factorial "))
+        fac(f)
+
+    
+    elif choice == 4:
+        ad = int(input("enter  np for adam "))
+        adam(ad)
+
+    elif choice == 5:
+        p=int(input(" enter for palin "))
+        palindrome(p)
+    a=int(input("Press 1 to continue "))
