@@ -1,0 +1,58 @@
+def add(*value):
+    a = 0
+    for i in value:
+        a+=i
+    print(a)
+def sub(*value):
+    a = 0
+    for i in value:
+        a-=i
+    print(a)
+def mul(*value):
+    a = 1
+    for i in value:
+        a*=i
+    print(a)
+def div(*value):
+    a = 1
+    for i in value:
+        a//=i
+    print(a)
+a = 1
+while a==1 :
+    choice = int(input(''' Choose any options :
+1) addition
+2)sub
+3)div
+4)mul '''))
+    if choice == 1:
+        n = int(input("Enter the elements addition  "))
+        lis = []
+        for i in range(n):
+            ele = int(input("Enter the elements "))
+            lis.append(ele)
+        add(*lis)
+        
+        
+    elif choice == 2:
+        n = int(input("Enter the elements sub  "))
+        lis = []
+        for i in range(n):
+            ele = int(input("Enter the elements "))
+            lis.append(ele)
+        sub(*lis)
+    elif choice == 3:
+        n = int(input("Enter the elements multiplication  "))
+        lis = []
+        for i in range(n):
+            ele = int(input("Enter the elements "))
+            lis.append(ele)
+        mul(*lis)
+    elif choice == 4:
+        n = int(input("Enter the elements division  "))
+        lis = []
+        for i in range(n):
+            ele = int(input("Enter the elements "))
+            lis.append(ele)
+        div(*lis)
+    a = int(input("Press 1 to continue "))
