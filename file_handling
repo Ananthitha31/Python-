@@ -1,0 +1,38 @@
+def student():
+    n = int(input("Enter number of students "))
+    for i in range(n):
+        name = input("Enter the name : ")
+        age = input("Enter the age ")
+        depart = input("Enter the department(msc.comp, biology, commerse ) ")
+        if depart.lower() == 'comp' :
+            a = int(input("Enter your computer science mark "))
+            b = int(input("Enter your math mark "))
+            c = int(input("Enter your physics mark "))
+        elif depart.lower() == 'bio' :
+            a = int(input("Enter your biology mark "))
+            b = int(input("Enter your math mark "))
+            c = int(input("Enter your physics mark "))
+        elif depart.lower() == 'commerse' :
+            a = int(input("Enter your commerse mark "))
+            b = int(input("Enter your economics mark "))
+            c = int(input("Enter your math mark "))
+        else :
+            print("Invalid input ")
+        percent = (a+b+c)/3
+        if percent >= 80 :
+            print("Congradulations , you got A grade ")
+        elif percent >= 50:
+            print("super , you got B grade ")
+        elif percent >= 30:
+            print("You got c grade ")
+        else:
+            print("got fail in exam ")
+        try:
+            with open("file.txt" , 'a' ) as file :
+                file.write('\n'+name+ '\t'+age + '\t'+depart + '\t'+str(percent))
+                                                            
+                print("Content is appended to 'file.txt' ")
+        except FileNotFoundError :
+            print("error file does not exists ")
+
+student()          
